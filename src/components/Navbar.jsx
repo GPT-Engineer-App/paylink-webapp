@@ -16,8 +16,8 @@ const Navbar = () => (
       <Link as={NavLink} to="/remittance" color="white" _hover={{ textDecoration: "none" }}>
         Remittance
       </Link>
-      <Link as={NavLink} to="/e-wallet" color="white" _hover={{ textDecoration: "none" }}>
-        E-Wallet
+      <Link as={NavLink} to="/hitpay-features" color="white" _hover={{ textDecoration: "none" }}>
+        HitPay Features
       </Link>
     </Flex>
   </Box>
