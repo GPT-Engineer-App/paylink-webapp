@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Flex, Box, useColorMode, Button, IconButton } from "@chakra-ui/react";
 import { FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaSun, FaMoon, FaUser, FaComments, FaQuestionCircle } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Index from "./pages/Index.jsx";
 import Settings from "./pages/Settings.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
@@ -79,6 +79,10 @@ const BottomNavBar = () => {
 };
 
 function App() {
+  useEffect(() => {
+    document.title = "Cashier Account";
+  }, []);
+
   return (
     <Router>
       <Flex flexDirection="column" minHeight="100vh">
