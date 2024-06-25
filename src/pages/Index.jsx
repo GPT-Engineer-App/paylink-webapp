@@ -3,7 +3,7 @@ import { Container, Text, VStack, Heading, Box } from "@chakra-ui/react";
 const Index = () => {
   return (
     <Box 
-      bgImage="url('/path-to-your-image.jpg')" 
+      bgImage="url('/images/body-background.jpg')" 
       bgSize="cover" 
       bgPosition="center" 
       minH="100vh"
@@ -16,8 +16,9 @@ const Index = () => {
       >
         <Container centerContent maxW="container.xl" py={8}>
           <VStack spacing={4} textAlign="center">
-            <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>Welcome to Platapay</Heading>
-            <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }}>Your one-stop solution for online payments, bills payments, remittance, and e-wallet services.</Text>
+            <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>Platapay</Heading>
+            <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }}>Your Trusted Payment Partner</Text>
+            <Text fontSize={{ base: "md", md: "lg", lg: "xl" }}>Home</Text>
           </VStack>
         </Container>
       </Box>
