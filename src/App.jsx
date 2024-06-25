@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Flex, Box, useColorMode, Button, IconButton } from "@chakra-ui/react";
-import { FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaSun, FaMoon } from "react-icons/fa";
+import { FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaSun, FaMoon, FaUser, FaComments } from "react-icons/fa";
 import Index from "./pages/Index.jsx";
 import Settings from "./pages/Settings.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
@@ -34,10 +34,10 @@ const BottomNavBar = () => (
     py={2} 
     zIndex={1000}
   >
-    <IconButton icon={<FaHome size="24px" />} aria-label="Overview" variant="outline" color="white" />
-    <IconButton icon={<FaExchangeAlt size="24px" />} aria-label="Transfer" variant="outline" color="white" />
-    <IconButton icon={<FaMoneyBill size="24px" />} aria-label="Pay" variant="outline" color="white" />
-    <IconButton icon={<FaBell size="24px" />} aria-label="Due" variant="outline" color="white" />
+    <IconButton icon={<FaHome size="24px" />} aria-label="Home" variant="outline" color="white" />
+    <IconButton icon={<FaSun size="24px" />} aria-label="Theme" variant="outline" color="white" />
+    <IconButton icon={<FaUser size="24px" />} aria-label="Profile" variant="outline" color="white" />
+    <IconButton icon={<FaComments size="24px" />} aria-label="Chat" variant="outline" color="white" />
   </Box>
 );
 
