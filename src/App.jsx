@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Flex, Box, Text, VStack, useColorMode, Button, IconButton } from "@chakra-ui/react";
 import { FaFacebook, FaTwitter, FaInstagram, FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaEllipsisH } from "react-icons/fa";
 import Index from "./pages/Index.jsx";
+import Settings from "./pages/Settings.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
 import BillsPayments from "./pages/BillsPayments.jsx";
 import Remittance from "./pages/Remittance.jsx";
@@ -90,6 +91,7 @@ function App() {
             <Route exact path="/remittance" element={<Remittance />} />
             <Route exact path="/e-wallet" element={<EWallet />} />
             <Route exact path="/dashboard" element={<Dashboard />} />
+            <Route exact path="/settings" element={<Settings />} />
           </Routes>
         </Box>
         <Footer />
