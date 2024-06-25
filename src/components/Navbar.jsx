@@ -86,21 +86,26 @@ const Navbar = () => {
         zIndex={1001}
       >
         <Flex justify="space-between" align="center">
-          <IconButton
-            icon={<GiHamburgerMenu />}
-            aria-label="Menu"
-            variant="outline"
-            color="white"
-            onClick={onOpen}
-          />
-          <Flex direction="column" align="center">
+          <Flex align="center">
+            <IconButton
+              icon={<GiHamburgerMenu />}
+              aria-label="Menu"
+              variant="outline"
+              color="white"
+              onClick={onOpen}
+            />
             <Image 
               src={logoSrc} 
               alt="Platapay Logo" 
-              width={{ base: "100px", md: "100%" }} 
+              width={{ base: "50px", md: "100px" }} 
               height={{ base: "auto", md: "auto" }} 
+              ml={2}
             />
           </Flex>
+          <Box textAlign="center">
+            <Text fontSize="lg" color="white">Cashier Account</Text>
+            <Text fontSize="sm" color="white">Page Title</Text>
+          </Box>
           <Flex>
             <IconButton
               aria-label="Notifications"
