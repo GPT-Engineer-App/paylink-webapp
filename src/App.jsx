@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Flex, Box, useColorMode, Button } from "@chakra-ui/react";
+import { Flex, Box, useColorMode, Button, IconButton } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
+import { FaHome, FaSun, FaUser, FaQuestionCircle } from "react-icons/fa";
 import Index from "./pages/Index.jsx";
 import Settings from "./pages/Settings.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
