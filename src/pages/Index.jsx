@@ -24,18 +24,18 @@ const Index = () => {
         <Container centerContent>
           <Image src="/images/logo.png" alt="Platapay Logo" boxSize="100px" mb={4} />
           <VStack spacing={4} textAlign="center">
-            <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>Platapay</Heading>
-            <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }}>Your Trusted Payment Partner</Text>
-            <Text fontSize={{ base: "md", md: "lg", lg: "xl" }}>Experience seamless transactions with Platapay, your reliable partner in managing finances efficiently and securely.</Text>
+            <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>Dashboard</Heading>
+            <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }}>Welcome to your Dashboard</Text>
+            <Text fontSize={{ base: "md", md: "lg", lg: "xl" }}>Here you can manage all your financial activities efficiently and securely.</Text>
             <Button colorScheme="teal" size="lg" mt={4}>Get Started</Button>
           </VStack>
           <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md">
-            <Heading fontSize={{ base: "xl", md: "2xl" }}>Why Choose Platapay?</Heading>
+            <Heading fontSize={{ base: "xl", md: "2xl" }}>Quick Actions</Heading>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4} mt={4}>
               <Box p={4} bg="blue.100" borderRadius="md" boxShadow="md" textAlign="center">
                 <Icon as={FaMobileAlt} w={8} h={8} mb={2} />
-                <Text fontSize="lg">Mobile Friendly</Text>
-                <Text fontSize="md">Access your account anytime, anywhere.</Text>
+                <Text fontSize="lg">Mobile Payments</Text>
+                <Text fontSize="md">Pay using your mobile device.</Text>
               </Box>
               <Box p={4} bg="green.100" borderRadius="md" boxShadow="md" textAlign="center">
                 <Icon as={FaShieldAlt} w={8} h={8} mb={2} />
@@ -50,7 +50,7 @@ const Index = () => {
             </SimpleGrid>
           </Box>
           <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md">
-            <Heading fontSize={{ base: "xl", md: "2xl" }} mb={4}>Our Services</Heading>
+            <Heading fontSize={{ base: "xl", md: "2xl" }} mb={4}>Your Accounts</Heading>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={4}>
               <Box p={4} bg="blue.100" borderRadius="md" boxShadow="md" textAlign="center">
                 <Icon as={FaWallet} w={8} h={8} mb={2} />
