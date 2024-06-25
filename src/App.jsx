@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Flex, Box, useColorMode, Button, IconButton } from "@chakra-ui/react";
-import { FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaSun, FaMoon, FaUser, FaComments, FaQuestionCircle } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { FaHome, FaSun, FaUser, FaQuestionCircle } from "react-icons/fa";
 import Index from "./pages/Index.jsx";
 import Settings from "./pages/Settings.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
@@ -34,7 +34,7 @@ const BottomNavBar = () => {
       bottom={0} 
       left={0} 
       right={0} 
-      bg="brand.500" 
+      bg="purple.500" 
       color="white" 
       borderTop="1px solid #eaeaea" 
       display={{ base: "flex", md: "none" }} 
@@ -47,7 +47,7 @@ const BottomNavBar = () => {
         aria-label="Home" 
         variant="outline" 
         color="white" 
-        bg={activeIcon === 'home' ? 'brand.700' : 'transparent'}
+        bg={activeIcon === 'home' ? 'purple.700' : 'transparent'}
         onClick={() => handleIconClick('home')}
       />
       <IconButton 
@@ -55,7 +55,7 @@ const BottomNavBar = () => {
         aria-label="Theme" 
         variant="outline" 
         color="white" 
-        bg={activeIcon === 'theme' ? 'brand.700' : 'transparent'}
+        bg={activeIcon === 'theme' ? 'purple.700' : 'transparent'}
         onClick={() => handleIconClick('theme')}
       />
       <IconButton 
@@ -63,7 +63,7 @@ const BottomNavBar = () => {
         aria-label="Profile" 
         variant="outline" 
         color="white" 
-        bg={activeIcon === 'profile' ? 'brand.700' : 'transparent'}
+        bg={activeIcon === 'profile' ? 'purple.700' : 'transparent'}
         onClick={() => handleIconClick('profile')}
       />
       <IconButton 
@@ -71,7 +71,7 @@ const BottomNavBar = () => {
         aria-label="Help" 
         variant="outline" 
         color="white" 
-        bg={activeIcon === 'help' ? 'brand.700' : 'transparent'}
+        bg={activeIcon === 'help' ? 'purple.700' : 'transparent'}
         onClick={() => handleIconClick('help')}
       />
     </Box>

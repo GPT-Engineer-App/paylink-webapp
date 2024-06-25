@@ -60,7 +60,7 @@ const Navbar = () => {
       <Box
         display={{ base: "none", md: "block" }}
         w="250px"
-        bg="brand.500"
+        bg="purple.500"
         color="white"
         h="100vh"
         p={4}
@@ -77,7 +77,7 @@ const Navbar = () => {
       <Box 
         display={{ base: "block", md: "none" }} 
         w="100%" 
-        bg="brand.500" 
+        bg="purple.500" 
         p={4}
         position="fixed"
         top={0}
@@ -166,7 +166,7 @@ const Navbar = () => {
       {/* Mobile menu drawer */}
       <Drawer placement="left" onClose={onClose} isOpen={isOpen && isMobile}>
         <DrawerOverlay />
-        <DrawerContent bg="brand.500">
+        <DrawerContent bg="purple.500">
           <DrawerCloseButton color="white" />
           <DrawerBody>
             <VStack spacing={4} align="stretch" mt={8}>

@@ -1,7 +1,7 @@
 import { Box, Heading, Text, Container } from "@chakra-ui/react";
 
 const Settings = () => (
-  <Box ml={{ base: 0, md: "250px" }}>
+  <Box ml={{ base: 0, md: "250px" }} mt={{ base: "60px", md: 0 }} mb={{ base: "60px", md: 0 }}>
     <Container maxW="container.xl" py={8}>
       <Box>
         <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>Settings</Heading>
