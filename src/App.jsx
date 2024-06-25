@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Flex, Box, Text, VStack, useColorMode, Button, IconButton } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaInstagram, FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaEllipsisH } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaEllipsisH, FaUser, FaRegCommentDots, FaSun, FaMoon } from "react-icons/fa";
 import Index from "./pages/Index.jsx";
 import Settings from "./pages/Settings.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
@@ -10,36 +10,43 @@ import EWallet from "./pages/EWallet.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 
-const Footer = () => (
-  <Box 
-    as="footer" 
-    position="fixed" 
-    bottom={0} 
-    left={0} 
-    right={0} 
-    bg="brand.500" 
-    color="white" 
-    py={2}
-    display={{ base: "block", md: "none" }}
-    zIndex={1000}
-  >
-    <VStack spacing={1}>
-      <Text fontSize="sm">© 2023 Platapay</Text>
-      <Flex justifyContent="center" mt={2}>
-        <Box as="a" href="https://facebook.com" target="_blank" mx={2}>
-          <FaFacebook />
-        </Box>
-        <Box as="a" href="https://twitter.com" target="_blank" mx={2}>
-          <FaTwitter />
-        </Box>
-        <Box as="a" href="https://instagram.com" target="_blank" mx={2}>
-          <FaInstagram />
-        </Box>
-      </Flex>
-      <Text fontSize="xs">All rights reserved</Text>
-    </VStack>
-  </Box>
-);
+const Footer = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  return (
+    <Box 
+      as="footer" 
+      position="fixed" 
+      bottom={0} 
+      left={0} 
+      right={0} 
+      bg="brand.500" 
+      color="white" 
+      py={2}
+      display={{ base: "block", md: "none" }}
+      zIndex={1000}
+    >
+      <VStack spacing={1}>
+        <Text fontSize="sm">© 2023 Platapay</Text>
+        <Flex justifyContent="center" mt={2}>
+          <Box as="a" href="/" mx={2}>
+            <FaHome />
+          </Box>
+          <Box as="a" href="/profile" mx={2}>
+            <FaUser />
+          </Box>
+          <Box as="button" onClick={toggleColorMode} mx={2}>
+            {colorMode === "light" ? <FaMoon /> : <FaSun />}
+          </Box>
+          <Box as="a" href="/help" mx={2}>
+            <FaRegCommentDots />
+            <Text fontSize="xs" ml={1}>Help</Text>
+          </Box>
+        </Flex>
+        <Text fontSize="xs">All rights reserved</Text>
+      </VStack>
+    </Box>
+  );
+};
 
 const ThemeToggle = () => {
   const { colorMode, toggleColorMode } = useColorMode();
