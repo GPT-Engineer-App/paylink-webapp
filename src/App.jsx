@@ -36,7 +36,7 @@ const BottomNavBar = () => {
       right={0} 
       bg="purple.500" 
       color="white" 
-      borderTop="1px solid #eaeaea" 
+      borderTop="1px solid white" 
       display={{ base: "flex", md: "none" }} 
       justifyContent="space-around" 
       py={2} 
