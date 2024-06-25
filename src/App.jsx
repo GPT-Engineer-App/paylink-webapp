@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Flex, Box, useColorMode, Button, IconButton } from "@chakra-ui/react";
 import { FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaSun, FaMoon, FaUser, FaComments, FaQuestionCircle } from "react-icons/fa";
+import { useState } from "react";
 import Index from "./pages/Index.jsx";
 import Settings from "./pages/Settings.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
@@ -19,27 +20,63 @@ const ThemeToggle = () => {
   );
 };
 
-const BottomNavBar = () => (
-  <Box 
-    as="nav" 
-    position="fixed" 
-    bottom={0} 
-    left={0} 
-    right={0} 
-    bg="brand.500" 
-    color="white" 
-    borderTop="1px solid #eaeaea" 
-    display={{ base: "flex", md: "none" }} 
-    justifyContent="space-around" 
-    py={2} 
-    zIndex={1000}
-  >
-    <IconButton icon={<FaHome size="24px" />} aria-label="Home" variant="outline" color="white" />
-    <IconButton icon={<FaSun size="24px" />} aria-label="Theme" variant="outline" color="white" />
-    <IconButton icon={<FaUser size="24px" />} aria-label="Profile" variant="outline" color="white" />
-    <IconButton icon={<FaQuestionCircle size="24px" />} aria-label="Help" variant="outline" color="white" />
-  </Box>
-);
+const BottomNavBar = () => {
+  const [activeIcon, setActiveIcon] = useState(null);
+
+  const handleIconClick = (icon) => {
+    setActiveIcon(icon);
+  };
+
+  return (
+    <Box 
+      as="nav" 
+      position="fixed" 
+      bottom={0} 
+      left={0} 
+      right={0} 
+      bg="brand.500" 
+      color="white" 
+      borderTop="1px solid #eaeaea" 
+      display={{ base: "flex", md: "none" }} 
+      justifyContent="space-around" 
+      py={2} 
+      zIndex={1000}
+    >
+      <IconButton 
+        icon={<FaHome size="24px" />} 
+        aria-label="Home" 
+        variant="outline" 
+        color="white" 
+        bg={activeIcon === 'home' ? 'brand.700' : 'transparent'}
+        onClick={() => handleIconClick('home')}
+      />
+      <IconButton 
+        icon={<FaSun size="24px" />} 
+        aria-label="Theme" 
+        variant="outline" 
+        color="white" 
+        bg={activeIcon === 'theme' ? 'brand.700' : 'transparent'}
+        onClick={() => handleIconClick('theme')}
+      />
+      <IconButton 
+        icon={<FaUser size="24px" />} 
+        aria-label="Profile" 
+        variant="outline" 
+        color="white" 
+        bg={activeIcon === 'profile' ? 'brand.700' : 'transparent'}
+        onClick={() => handleIconClick('profile')}
+      />
+      <IconButton 
+        icon={<FaQuestionCircle size="24px" />} 
+        aria-label="Help" 
+        variant="outline" 
+        color="white" 
+        bg={activeIcon === 'help' ? 'brand.700' : 'transparent'}
+        onClick={() => handleIconClick('help')}
+      />
+    </Box>
+  );
+};
 
 function App() {
   return (
