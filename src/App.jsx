@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Flex, Box, Text, VStack, useColorMode, Button } from "@chakra-ui/react";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import Index from "./pages/Index.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
 import BillsPayments from "./pages/BillsPayments.jsx";
@@ -23,6 +24,17 @@ const Footer = () => (
   >
     <VStack spacing={1}>
       <Text fontSize="sm">© 2023 Platapay</Text>
+      <Flex justifyContent="center" mt={2}>
+        <Box as="a" href="https://facebook.com" target="_blank" mx={2}>
+          <FaFacebook />
+        </Box>
+        <Box as="a" href="https://twitter.com" target="_blank" mx={2}>
+          <FaTwitter />
+        </Box>
+        <Box as="a" href="https://instagram.com" target="_blank" mx={2}>
+          <FaInstagram />
+        </Box>
+      </Flex>
       <Text fontSize="xs">All rights reserved</Text>
     </VStack>
   </Box>
