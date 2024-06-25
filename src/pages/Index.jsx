@@ -1,21 +1,27 @@
-import { Container, Text, VStack, Heading, Box, Image, SimpleGrid, Icon } from "@chakra-ui/react";
+import { Container, Text, VStack, Heading, Box, Image, SimpleGrid, Icon, useColorModeValue } from "@chakra-ui/react";
 import { FaShoppingCart, FaUtensils, FaPiggyBank, FaWallet } from "react-icons/fa";
 
 const Index = () => {
+  const bgColor = useColorModeValue("blue.500", "gray.800");
+
   return (
     <Box 
-      bgImage="url('/images/body-background.jpg')" 
-      bgSize="cover" 
-      bgPosition="center" 
+      bg={bgColor} 
       minH="100vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      p={4}
     >
       <Box 
-        display="flex" 
-        alignItems="center" 
-        pt={{ base: "70px", md: "20px" }} 
-        pb={{ base: "70px", md: "20px" }}
+        bg="white" 
+        p={8} 
+        borderRadius="md" 
+        boxShadow="xl"
+        maxW="container.md"
+        w="100%"
       >
-        <Container centerContent maxW="container.xl" py={8}>
+        <Container centerContent>
           <Image src="/images/logo.png" alt="Platapay Logo" boxSize="100px" mb={4} />
           <VStack spacing={4} textAlign="center">
             <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>Platapay</Heading>
