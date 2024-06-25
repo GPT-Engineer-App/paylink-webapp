@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import { Box, Flex, Link, Image, IconButton, useDisclosure, VStack, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Link, Image, IconButton, useDisclosure, VStack, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody, useBreakpointValue, Text } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { MdNotifications, MdSettings } from "react-icons/md";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -55,7 +56,7 @@ const Navbar = () => {
         top={0}
         zIndex={1001}
       >
-        <Image src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub.png?w=1024" alt="Platapay Logo" width="100%" height="auto" mb={8} />
+        <Image src="https://example.com/platapay-logo.png" alt="Platapay Logo" width="100%" height="auto" mb={8} />
         <NavLinks />
       </Box>
 
@@ -73,7 +74,7 @@ const Navbar = () => {
       >
         <Flex justify="space-between" align="center">
           <Image 
-            src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub.png?w=1024" 
+            src="https://example.com/platapay-logo.png" 
             alt="Platapay Logo" 
             width={{ base: "50px", md: "100%" }} 
             height={{ base: "auto", md: "auto" }} 
@@ -86,6 +87,41 @@ const Navbar = () => {
             color="white"
           />
         </Flex>
+      </Box>
+
+      {/* User role and balance */}
+      <Box
+        display={{ base: "none", md: "block" }}
+        position="fixed"
+        top={4}
+        right={4}
+        color="white"
+      >
+        <Text>User Role: Admin</Text>
+        <Text>Balance: $1000</Text>
+      </Box>
+
+      {/* Notifications and settings icons */}
+      <Box
+        display={{ base: "none", md: "block" }}
+        position="fixed"
+        top={4}
+        right={16}
+        color="white"
+      >
+        <IconButton
+          aria-label="Notifications"
+          icon={<MdNotifications />}
+          variant="outline"
+          color="white"
+          mr={4}
+        />
+        <IconButton
+          aria-label="Settings"
+          icon={<MdSettings />}
+          variant="outline"
+          color="white"
+        />
       </Box>
 
       {/* Mobile menu drawer */}

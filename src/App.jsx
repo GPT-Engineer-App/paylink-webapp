@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Flex, Box, Text, VStack, useColorMode, Button } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Flex, Box, Text, VStack, useColorMode, Button, IconButton } from "@chakra-ui/react";
+import { FaFacebook, FaTwitter, FaInstagram, FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaEllipsisH } from "react-icons/fa";
 import Index from "./pages/Index.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
 import BillsPayments from "./pages/BillsPayments.jsx";
@@ -49,6 +49,28 @@ const ThemeToggle = () => {
   );
 };
 
+const BottomNavBar = () => (
+  <Box 
+    as="nav" 
+    position="fixed" 
+    bottom={0} 
+    left={0} 
+    right={0} 
+    bg="white" 
+    borderTop="1px solid #eaeaea" 
+    display={{ base: "flex", md: "none" }} 
+    justifyContent="space-around" 
+    py={2} 
+    zIndex={1000}
+  >
+    <IconButton icon={<FaHome />} aria-label="Overview" />
+    <IconButton icon={<FaExchangeAlt />} aria-label="Transfer" />
+    <IconButton icon={<FaMoneyBill />} aria-label="Pay" />
+    <IconButton icon={<FaBell />} aria-label="Due" />
+    <IconButton icon={<FaEllipsisH />} aria-label="More" />
+  </Box>
+);
+
 function App() {
   return (
     <Router>
@@ -71,6 +93,7 @@ function App() {
           </Routes>
         </Box>
         <Footer />
+        <BottomNavBar />
       </Flex>
     </Router>
   );
