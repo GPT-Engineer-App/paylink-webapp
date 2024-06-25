@@ -1,5 +1,5 @@
-import { Container, Text, VStack, Heading, Box, Image, SimpleGrid, Icon, useColorModeValue } from "@chakra-ui/react";
-import { FaShoppingCart, FaUtensils, FaPiggyBank, FaWallet } from "react-icons/fa";
+import { Container, Text, VStack, Heading, Box, Image, SimpleGrid, Icon, useColorModeValue, Button } from "@chakra-ui/react";
+import { FaShoppingCart, FaUtensils, FaPiggyBank, FaWallet, FaMobileAlt, FaShieldAlt, FaMoneyBillWave } from "react-icons/fa";
 
 const Index = () => {
   const bgColor = useColorModeValue("skyblue", "gray.800");
@@ -27,34 +27,50 @@ const Index = () => {
             <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>Platapay</Heading>
             <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }}>Your Trusted Payment Partner</Text>
             <Text fontSize={{ base: "md", md: "lg", lg: "xl" }}>Experience seamless transactions with Platapay, your reliable partner in managing finances efficiently and securely.</Text>
+            <Button colorScheme="teal" size="lg" mt={4}>Get Started</Button>
           </VStack>
           <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md">
-            <Heading fontSize={{ base: "xl", md: "2xl" }}>Financial Overview</Heading>
-            <Text fontSize={{ base: "lg", md: "xl" }}>Outgoing: ₱2000</Text>
-            <Text fontSize={{ base: "lg", md: "xl" }}>Incoming: ₱3000</Text>
+            <Heading fontSize={{ base: "xl", md: "2xl" }}>Why Choose Platapay?</Heading>
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4} mt={4}>
+              <Box p={4} bg="blue.100" borderRadius="md" boxShadow="md" textAlign="center">
+                <Icon as={FaMobileAlt} w={8} h={8} mb={2} />
+                <Text fontSize="lg">Mobile Friendly</Text>
+                <Text fontSize="md">Access your account anytime, anywhere.</Text>
+              </Box>
+              <Box p={4} bg="green.100" borderRadius="md" boxShadow="md" textAlign="center">
+                <Icon as={FaShieldAlt} w={8} h={8} mb={2} />
+                <Text fontSize="lg">Secure</Text>
+                <Text fontSize="md">Your transactions are safe with us.</Text>
+              </Box>
+              <Box p={4} bg="yellow.100" borderRadius="md" boxShadow="md" textAlign="center">
+                <Icon as={FaMoneyBillWave} w={8} h={8} mb={2} />
+                <Text fontSize="lg">Low Fees</Text>
+                <Text fontSize="md">Enjoy competitive rates and low fees.</Text>
+              </Box>
+            </SimpleGrid>
           </Box>
           <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md">
-            <Heading fontSize={{ base: "xl", md: "2xl" }} mb={4}>Expense Breakdown</Heading>
+            <Heading fontSize={{ base: "xl", md: "2xl" }} mb={4}>Our Services</Heading>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={4}>
               <Box p={4} bg="blue.100" borderRadius="md" boxShadow="md" textAlign="center">
                 <Icon as={FaWallet} w={8} h={8} mb={2} />
-                <Text fontSize="lg">Regular expenses</Text>
-                <Text fontSize="xl">₱500</Text>
+                <Text fontSize="lg">E-Wallet</Text>
+                <Text fontSize="md">Manage your funds conveniently.</Text>
               </Box>
               <Box p={4} bg="green.100" borderRadius="md" boxShadow="md" textAlign="center">
                 <Icon as={FaUtensils} w={8} h={8} mb={2} />
                 <Text fontSize="lg">Groceries</Text>
-                <Text fontSize="xl">₱300</Text>
+                <Text fontSize="md">Pay for your groceries with ease.</Text>
               </Box>
               <Box p={4} bg="yellow.100" borderRadius="md" boxShadow="md" textAlign="center">
                 <Icon as={FaShoppingCart} w={8} h={8} mb={2} />
-                <Text fontSize="lg">Variable expenses</Text>
-                <Text fontSize="xl">₱700</Text>
+                <Text fontSize="lg">Shopping</Text>
+                <Text fontSize="md">Shop online and pay securely.</Text>
               </Box>
               <Box p={4} bg="purple.100" borderRadius="md" boxShadow="md" textAlign="center">
                 <Icon as={FaPiggyBank} w={8} h={8} mb={2} />
                 <Text fontSize="lg">Savings</Text>
-                <Text fontSize="xl">₱500</Text>
+                <Text fontSize="md">Save money with our high interest rates.</Text>
               </Box>
             </SimpleGrid>
           </Box>
