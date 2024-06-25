@@ -1,11 +1,10 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Flex, Box, Text, VStack } from "@chakra-ui/react";
+import { Flex, Box, Text, VStack, useColorMode, Button } from "@chakra-ui/react";
 import Index from "./pages/Index.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
 import BillsPayments from "./pages/BillsPayments.jsx";
 import Remittance from "./pages/Remittance.jsx";
 import EWallet from "./pages/EWallet.jsx";
-import HitPayFeatures from "./pages/HitPayFeatures.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 
@@ -29,11 +28,21 @@ const Footer = () => (
   </Box>
 );
 
+const ThemeToggle = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  return (
+    <Button onClick={toggleColorMode} position="fixed" top={4} right={4}>
+      {colorMode === "light" ? "Dark" : "Light"} Mode
+    </Button>
+  );
+};
+
 function App() {
   return (
     <Router>
       <Flex flexDirection="column" minHeight="100vh">
         <Navbar />
+        <ThemeToggle />
         <Box 
           flex={1} 
           mt={{ base: "60px", md: 0 }} 
@@ -46,7 +55,6 @@ function App() {
             <Route exact path="/bills-payments" element={<BillsPayments />} />
             <Route exact path="/remittance" element={<Remittance />} />
             <Route exact path="/e-wallet" element={<EWallet />} />
-            <Route exact path="/hitpay-features" element={<HitPayFeatures />} />
             <Route exact path="/dashboard" element={<Dashboard />} />
           </Routes>
         </Box>
