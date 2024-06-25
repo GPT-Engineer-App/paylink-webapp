@@ -56,7 +56,7 @@ const Navbar = () => {
         top={0}
         zIndex={1001}
       >
-        <Image src="https://example.com/platapay-logo.png" alt="Platapay Logo" width="100%" height="auto" mb={8} />
+        <Image src="/images/platapay-logo.png" alt="Platapay Logo" width="100%" height="auto" mb={8} />
         <NavLinks />
       </Box>
 
@@ -74,7 +74,7 @@ const Navbar = () => {
       >
         <Flex justify="space-between" align="center">
           <Image 
-            src="https://example.com/platapay-logo.png" 
+            src="/images/platapay-logo.png" 
             alt="Platapay Logo" 
             width={{ base: "50px", md: "100%" }} 
             height={{ base: "auto", md: "auto" }} 
