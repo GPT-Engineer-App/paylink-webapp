@@ -6,6 +6,7 @@ import Remittance from "./pages/Remittance.jsx";
 import EWallet from "./pages/EWallet.jsx";
 import HitPayFeatures from "./pages/HitPayFeatures.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/remittance" element={<Remittance />} />
         <Route exact path="/e-wallet" element={<EWallet />} />
         <Route exact path="/hitpay-features" element={<HitPayFeatures />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   );
