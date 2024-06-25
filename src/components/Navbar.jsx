@@ -32,7 +32,7 @@ const Navbar = () => {
       <Box
         display={{ base: "none", md: "block" }}
         w="250px"
-        bg="teal.500"
+        bg="brand.500"
         color="white"
         h="100vh"
         p={4}
@@ -42,7 +42,7 @@ const Navbar = () => {
       </Box>
 
       {/* Mobile header */}
-      <Box display={{ base: "block", md: "none" }} w="100%" bg="teal.500" p={4}>
+      <Box display={{ base: "block", md: "none" }} w="100%" bg="brand.500" p={4}>
         <Flex justify="space-between" align="center">
           <Image src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px.png?w=500" alt="Platapay Logo" boxSize="50px" />
           <IconButton
@@ -58,7 +58,7 @@ const Navbar = () => {
       {/* Mobile menu drawer */}
       <Drawer placement="left" onClose={onClose} isOpen={isOpen && isMobile}>
         <DrawerOverlay />
-        <DrawerContent bg="teal.500">
+        <DrawerContent bg="brand.500">
           <DrawerCloseButton color="white" />
           <DrawerBody>
             <VStack spacing={4} align="stretch" mt={8}>
