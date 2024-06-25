@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Box, Flex, Link, Image, IconButton, useDisclosure, VStack, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody, useBreakpointValue, Text } from "@chakra-ui/react";
+import { Box, Flex, Link, Image, IconButton, useDisclosure, VStack, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody, useBreakpointValue, Text, Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdNotifications, MdSettings } from "react-icons/md";
@@ -7,6 +7,11 @@ import { MdNotifications, MdSettings } from "react-icons/md";
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isMobile = useBreakpointValue({ base: true, md: false });
+  const [notifications, setNotifications] = React.useState([
+    "Notification 1",
+    "Notification 2",
+    "Notification 3"
+  ]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -75,20 +80,15 @@ const Navbar = () => {
         right={0}
         zIndex={1001}
       >
-        <Flex justify="space-between" align="center">
+        <Flex justify="center" align="center" direction="column">
           <Image 
             src="/images/platapay-logo.png" 
             alt="Platapay Logo" 
             width={{ base: "50px", md: "100%" }} 
             height={{ base: "auto", md: "auto" }} 
           />
-          <IconButton
-            aria-label="Open menu"
-            icon={<GiHamburgerMenu />}
-            onClick={onOpen}
-            variant="outline"
-            color="white"
-          />
+          <Text fontSize="2xl" color="white">Platapay</Text>
+          <Text fontSize="md" color="white">Page Title</Text>
         </Flex>
       </Box>
 
@@ -112,18 +112,22 @@ const Navbar = () => {
         right={16}
         color="white"
       >
-        <IconButton
-          aria-label="Notifications"
-          icon={<MdNotifications />}
-          variant="outline"
-          color="white"
-          mr={4}
-        />
+        <Menu>
+          <MenuButton as={Button} variant="outline" color="white">
+            <MdNotifications />
+          </MenuButton>
+          <MenuList>
+            {notifications.map((notification, index) => (
+              <MenuItem key={index}>{notification}</MenuItem>
+            ))}
+          </MenuList>
+        </Menu>
         <IconButton
           aria-label="Settings"
           icon={<MdSettings />}
           variant="outline"
           color="white"
+          ml={4}
         />
       </Box>
 
