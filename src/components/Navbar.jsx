@@ -56,8 +56,6 @@ const Navbar = () => {
         zIndex={1001}
       >
         <Image src="/images/logo.png" alt="Platapay Logo" boxSize="50px" mb={8} />
-        <Text fontSize="2xl" fontWeight="bold" color="white">Platapay</Text>
-        <Text fontSize="md" color="white">Your Trusted Payment Partner</Text>
         <NavLinks />
       </Box>
 
@@ -75,8 +73,6 @@ const Navbar = () => {
       >
         <Flex justify="space-between" align="center">
           <Image src="/images/logo.png" alt="Platapay Logo" boxSize="50px" />
-          <Text fontSize="2xl" fontWeight="bold" color="white">Platapay</Text>
-          <Text fontSize="md" color="white">Your Trusted Payment Partner</Text>
           <IconButton
             aria-label="Open menu"
             icon={<GiHamburgerMenu />}
