@@ -23,20 +23,23 @@ const Navbar = () => {
 
   const NavLinks = () => (
     <VStack align="stretch" spacing={4}>
-      <Link as={NavLink} to="/" color="white" _hover={{ textDecoration: "none" }}>
-        Home
+      <Link as={NavLink} to="/dashboard" color="white" _hover={{ textDecoration: "none" }}>
+        Overview
       </Link>
       <Link as={NavLink} to="/online-payments" color="white" _hover={{ textDecoration: "none" }}>
-        Online Payments
+        Payments
       </Link>
       <Link as={NavLink} to="/bills-payments" color="white" _hover={{ textDecoration: "none" }}>
-        Bills Payments
+        Bills
       </Link>
       <Link as={NavLink} to="/remittance" color="white" _hover={{ textDecoration: "none" }}>
-        Remittance
+        Transfers
       </Link>
       <Link as={NavLink} to="/e-wallet" color="white" _hover={{ textDecoration: "none" }}>
-        E-Wallet
+        Wallet
+      </Link>
+      <Link as={NavLink} to="/settings" color="white" _hover={{ textDecoration: "none" }}>
+        Settings
       </Link>
     </VStack>
   );
