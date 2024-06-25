@@ -25,7 +25,7 @@ const HitPayFeatures = () => {
               </Box>
             ))}
           </SimpleGrid>
-          <Button mt={8} colorScheme="teal" size={{ base: "md", md: "lg" }}>Learn More</Button>
+          <Button mt={8} colorScheme="brand" size={{ base: "md", md: "lg" }}>Learn More</Button>
         </Box>
       </Container>
     </Box>
