@@ -13,6 +13,11 @@ const Navbar = () => {
     "Notification 3"
   ]);
 
+  const logoSrc = useBreakpointValue({
+    base: "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px.png?w=500",
+    md: "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub.png?w=1024",
+  });
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isOpen && !event.target.closest('.chakra-drawer__content')) {
@@ -64,7 +69,7 @@ const Navbar = () => {
         top={0}
         zIndex={1001}
       >
-        <Image src="/images/platapay-logo.png" alt="Platapay Logo" width="100%" height="auto" mb={8} />
+        <Image src={logoSrc} alt="Platapay Logo" width="100%" height="auto" mb={8} />
         <NavLinks />
       </Box>
 
@@ -90,7 +95,7 @@ const Navbar = () => {
           />
           <Flex direction="column" align="center">
             <Image 
-              src="/images/platapay-logo.png" 
+              src={logoSrc} 
               alt="Platapay Logo" 
               width={{ base: "50px", md: "100%" }} 
               height={{ base: "auto", md: "auto" }} 
