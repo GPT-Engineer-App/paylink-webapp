@@ -1,6 +1,6 @@
 import { Box, Flex, Link, Image, IconButton, useDisclosure, VStack, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -35,7 +35,7 @@ const Navbar = () => {
         <IconButton
           display={{ base: "flex", md: "none" }}
           aria-label="Open menu"
-          icon={<HamburgerIcon />}
+          icon={<GiHamburgerMenu />}
           onClick={onOpen}
           variant="outline"
           color="white"
