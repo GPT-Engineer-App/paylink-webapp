@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Flex, Box, Text, VStack, useColorMode, Button, IconButton } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaInstagram, FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaEllipsisH, FaUser, FaRegCommentDots, FaSun, FaMoon } from "react-icons/fa";
+import { Flex, Box, useColorMode, Button, IconButton } from "@chakra-ui/react";
+import { FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaEllipsisH, FaSun, FaMoon } from "react-icons/fa";
 import Index from "./pages/Index.jsx";
 import Settings from "./pages/Settings.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
@@ -9,44 +9,6 @@ import Remittance from "./pages/Remittance.jsx";
 import EWallet from "./pages/EWallet.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
-
-const Footer = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  return (
-    <Box 
-      as="footer" 
-      position="fixed" 
-      bottom={0} 
-      left={0} 
-      right={0} 
-      bg="brand.500" 
-      color="white" 
-      py={2}
-      display={{ base: "block", md: "none" }}
-      zIndex={1000}
-    >
-      <VStack spacing={1}>
-        <Text fontSize="sm">© 2023 Platapay</Text>
-        <Flex justifyContent="center" mt={2}>
-          <Box as="a" href="/" mx={2}>
-            <FaHome />
-          </Box>
-          <Box as="a" href="/profile" mx={2}>
-            <FaUser />
-          </Box>
-          <Box as="button" onClick={toggleColorMode} mx={2}>
-            {colorMode === "light" ? <FaMoon /> : <FaSun />}
-          </Box>
-          <Box as="a" href="/help" mx={2}>
-            <FaRegCommentDots />
-            <Text fontSize="xs" ml={1}>Help</Text>
-          </Box>
-        </Flex>
-        <Text fontSize="xs">All rights reserved</Text>
-      </VStack>
-    </Box>
-  );
-};
 
 const ThemeToggle = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -64,18 +26,19 @@ const BottomNavBar = () => (
     bottom={0} 
     left={0} 
     right={0} 
-    bg="white" 
+    bg="brand.500" 
+    color="white" 
     borderTop="1px solid #eaeaea" 
     display={{ base: "flex", md: "none" }} 
     justifyContent="space-around" 
     py={2} 
     zIndex={1000}
   >
-    <IconButton icon={<FaHome />} aria-label="Overview" />
-    <IconButton icon={<FaExchangeAlt />} aria-label="Transfer" />
-    <IconButton icon={<FaMoneyBill />} aria-label="Pay" />
-    <IconButton icon={<FaBell />} aria-label="Due" />
-    <IconButton icon={<FaEllipsisH />} aria-label="More" />
+    <IconButton icon={<FaHome />} aria-label="Overview" color="white" />
+    <IconButton icon={<FaExchangeAlt />} aria-label="Transfer" color="white" />
+    <IconButton icon={<FaMoneyBill />} aria-label="Pay" color="white" />
+    <IconButton icon={<FaBell />} aria-label="Due" color="white" />
+    <IconButton icon={<FaEllipsisH />} aria-label="More" color="white" />
   </Box>
 );
 
@@ -101,7 +64,6 @@ function App() {
             <Route exact path="/settings" element={<Settings />} />
           </Routes>
         </Box>
-        <Footer />
         <BottomNavBar />
       </Flex>
     </Router>
