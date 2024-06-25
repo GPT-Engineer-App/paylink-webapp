@@ -1,5 +1,5 @@
-import { Container, Text, VStack, Heading, Box, Image, SimpleGrid, Icon, useColorModeValue, Button } from "@chakra-ui/react";
-import { FaShoppingCart, FaUtensils, FaPiggyBank, FaWallet, FaMobileAlt, FaShieldAlt, FaMoneyBillWave } from "react-icons/fa";
+import { Container, Text, VStack, Heading, Box, Image, SimpleGrid, Icon, useColorModeValue, Button, Flex, HStack, Divider } from "@chakra-ui/react";
+import { FaShoppingCart, FaUtensils, FaPiggyBank, FaWallet, FaMobileAlt, FaShieldAlt, FaMoneyBillWave, FaBell, FaLifeRing, FaBullhorn } from "react-icons/fa";
 
 const Index = () => {
   const bgColor = useColorModeValue("skyblue", "gray.800");
@@ -73,6 +73,67 @@ const Index = () => {
                 <Text fontSize="md">Save money with our high interest rates.</Text>
               </Box>
             </SimpleGrid>
+          </Box>
+          <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md">
+            <Heading fontSize={{ base: "xl", md: "2xl" }} mb={4}>Financial Overview</Heading>
+            <Text fontSize={{ base: "md", md: "lg" }}>Get a quick overview of your financial status.</Text>
+            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4} mt={4}>
+              <Box p={4} bg="blue.100" borderRadius="md" boxShadow="md" textAlign="center">
+                <Text fontSize="lg">Total Balance</Text>
+                <Text fontSize="2xl">$5000</Text>
+              </Box>
+              <Box p={4} bg="green.100" borderRadius="md" boxShadow="md" textAlign="center">
+                <Text fontSize="lg">Monthly Expenses</Text>
+                <Text fontSize="2xl">$2000</Text>
+              </Box>
+            </SimpleGrid>
+          </Box>
+          <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md">
+            <Heading fontSize={{ base: "xl", md: "2xl" }} mb={4}>Expense Breakdown</Heading>
+            <Text fontSize={{ base: "md", md: "lg" }}>See where your money is going.</Text>
+            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4} mt={4}>
+              <Box p={4} bg="blue.100" borderRadius="md" boxShadow="md" textAlign="center">
+                <Text fontSize="lg">Rent</Text>
+                <Text fontSize="2xl">$1000</Text>
+              </Box>
+              <Box p={4} bg="green.100" borderRadius="md" boxShadow="md" textAlign="center">
+                <Text fontSize="lg">Groceries</Text>
+                <Text fontSize="2xl">$500</Text>
+              </Box>
+              <Box p={4} bg="yellow.100" borderRadius="md" boxShadow="md" textAlign="center">
+                <Text fontSize="lg">Utilities</Text>
+                <Text fontSize="2xl">$300</Text>
+              </Box>
+              <Box p={4} bg="purple.100" borderRadius="md" boxShadow="md" textAlign="center">
+                <Text fontSize="lg">Entertainment</Text>
+                <Text fontSize="2xl">$200</Text>
+              </Box>
+            </SimpleGrid>
+          </Box>
+          <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md">
+            <Heading fontSize={{ base: "xl", md: "2xl" }} mb={4}>Notifications</Heading>
+            <HStack spacing={4}>
+              <Icon as={FaBell} w={8} h={8} />
+              <Text fontSize={{ base: "md", md: "lg" }}>You have 3 new notifications.</Text>
+            </HStack>
+          </Box>
+          <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md">
+            <Heading fontSize={{ base: "xl", md: "2xl" }} mb={4}>Support</Heading>
+            <HStack spacing={4}>
+              <Icon as={FaLifeRing} w={8} h={8} />
+              <Text fontSize={{ base: "md", md: "lg" }}>Need help? Contact our support team.</Text>
+            </HStack>
+          </Box>
+          <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md">
+            <Heading fontSize={{ base: "xl", md: "2xl" }} mb={4}>Promotions</Heading>
+            <HStack spacing={4}>
+              <Icon as={FaBullhorn} w={8} h={8} />
+              <Text fontSize={{ base: "md", md: "lg" }}>Check out our latest promotions.</Text>
+            </HStack>
+          </Box>
+          <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md" textAlign="center">
+            <Image src="/images/platapay-logo.png" alt="Platapay Logo" boxSize="50px" mb={4} />
+            <Text fontSize={{ base: "md", md: "lg" }}>Your trusted financial partner.</Text>
           </Box>
         </Container>
       </Box>
