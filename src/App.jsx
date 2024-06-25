@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Flex, Box, useColorMode, Button, IconButton } from "@chakra-ui/react";
-import { FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaSun, FaMoon, FaUser, FaComments } from "react-icons/fa";
+import { FaHome, FaExchangeAlt, FaMoneyBill, FaBell, FaSun, FaMoon, FaUser, FaComments, FaQuestionCircle } from "react-icons/fa";
 import Index from "./pages/Index.jsx";
 import Settings from "./pages/Settings.jsx";
 import OnlinePayments from "./pages/OnlinePayments.jsx";
@@ -37,7 +37,7 @@ const BottomNavBar = () => (
     <IconButton icon={<FaHome size="24px" />} aria-label="Home" variant="outline" color="white" />
     <IconButton icon={<FaSun size="24px" />} aria-label="Theme" variant="outline" color="white" />
     <IconButton icon={<FaUser size="24px" />} aria-label="Profile" variant="outline" color="white" />
-    <IconButton icon={<FaComments size="24px" />} aria-label="Chat" variant="outline" color="white" />
+    <IconButton icon={<FaQuestionCircle size="24px" />} aria-label="Help" variant="outline" color="white" />
   </Box>
 );
 
