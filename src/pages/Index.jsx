@@ -2,7 +2,7 @@ import { Container, Text, VStack, Heading, Box } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Box minHeight="calc(100vh - 72px)" display="flex" alignItems="center">
+    <Box minHeight="100vh" display="flex" alignItems="center" ml={{ base: 0, md: "250px" }}>
       <Container centerContent maxW="container.xl" py={8}>
         <VStack spacing={4} textAlign="center">
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>Welcome to Platapay</Heading>
