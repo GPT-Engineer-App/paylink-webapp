@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Box, Flex, Link, Image, IconButton, useDisclosure, VStack, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody, useBreakpointValue, Text, Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { MdNotifications, MdSettings } from "react-icons/md";
+import { MdNotifications, MdSettings, MdEmail } from "react-icons/md";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -80,15 +80,39 @@ const Navbar = () => {
         right={0}
         zIndex={1001}
       >
-        <Flex justify="center" align="center" direction="column">
-          <Image 
-            src="/images/platapay-logo.png" 
-            alt="Platapay Logo" 
-            width={{ base: "50px", md: "100%" }} 
-            height={{ base: "auto", md: "auto" }} 
+        <Flex justify="space-between" align="center">
+          <IconButton
+            icon={<GiHamburgerMenu />}
+            aria-label="Menu"
+            variant="outline"
+            color="white"
+            onClick={onOpen}
           />
-          <Text fontSize="2xl" color="white">Platapay</Text>
-          <Text fontSize="md" color="white">Page Title</Text>
+          <Flex direction="column" align="center">
+            <Image 
+              src="/images/platapay-logo.png" 
+              alt="Platapay Logo" 
+              width={{ base: "50px", md: "100%" }} 
+              height={{ base: "auto", md: "auto" }} 
+            />
+            <Text fontSize="2xl" color="white">Platapay</Text>
+            <Text fontSize="md" color="white">{document.title}</Text>
+          </Flex>
+          <Flex>
+            <IconButton
+              aria-label="Notifications"
+              icon={<MdNotifications />}
+              variant="outline"
+              color="white"
+              mr={2}
+            />
+            <IconButton
+              aria-label="Email"
+              icon={<MdEmail />}
+              variant="outline"
+              color="white"
+            />
+          </Flex>
         </Flex>
       </Box>
 
