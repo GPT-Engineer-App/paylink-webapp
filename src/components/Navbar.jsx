@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Box, Flex, Link, Image, IconButton, useDisclosure, VStack, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody, useBreakpointValue } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -5,6 +6,19 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isMobile = useBreakpointValue({ base: true, md: false });
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpen && !event.target.closest('.chakra-drawer__content')) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen, onClose]);
 
   const NavLinks = () => (
     <VStack align="stretch" spacing={4}>
@@ -27,7 +41,7 @@ const Navbar = () => {
   );
 
   return (
-    <Flex>
+    <Flex position="fixed" top={0} left={0} right={0} zIndex={1000}>
       {/* Sidebar for tablet and desktop */}
       <Box
         display={{ base: "none", md: "block" }}
@@ -36,13 +50,27 @@ const Navbar = () => {
         color="white"
         h="100vh"
         p={4}
+        position="fixed"
+        left={0}
+        top={0}
+        zIndex={1001}
       >
         <Image src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px.png?w=500" alt="Platapay Logo" boxSize="50px" mb={8} />
         <NavLinks />
       </Box>
 
       {/* Mobile header */}
-      <Box display={{ base: "block", md: "none" }} w="100%" bg="brand.500" p={4}>
+      <Box 
+        display={{ base: "block", md: "none" }} 
+        w="100%" 
+        bg="brand.500" 
+        p={4}
+        position="fixed"
+        top={0}
+        left={0}
+        right={0}
+        zIndex={1001}
+      >
         <Flex justify="space-between" align="center">
           <Image src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px.png?w=500" alt="Platapay Logo" boxSize="50px" />
           <IconButton
