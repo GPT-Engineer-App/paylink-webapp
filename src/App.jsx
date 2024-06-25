@@ -1,5 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Flex, Box, useColorMode, Button, IconButton } from "@chakra-ui/react";
+import { Flex, Box, useColorMode, Button, IconButton, Heading, Text } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { FaHome, FaSun, FaUser, FaQuestionCircle } from "react-icons/fa";
 import Index from "./pages/Index.jsx";
@@ -87,6 +87,15 @@ function App() {
     <Router>
       <Flex flexDirection="column" minHeight="100vh">
         <Navbar />
+        <Box 
+          bg="gray.100" 
+          w="100%" 
+          p={4} 
+          display={{ base: "none", md: "block" }}
+        >
+          <Heading as="h1" size="lg">Cashier Account</Heading>
+          <Text fontSize="md">Page Name</Text>
+        </Box>
         <ThemeToggle />
         <Box 
           flex={1} 

@@ -3,6 +3,7 @@ import { Box, Flex, Link, Image, IconButton, useDisclosure, VStack, Drawer, Draw
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdNotifications, MdSettings, MdEmail } from "react-icons/md";
+import mainLogo from '../../public/images/main-logo.png';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -13,10 +14,7 @@ const Navbar = () => {
     "Notification 3"
   ]);
 
-  const logoSrc = useBreakpointValue({
-    base: "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub-500-x-500-px.png?w=500",
-    md: "https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub.png?w=1024",
-  });
+  const logoSrc = mainLogo;
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -126,43 +124,48 @@ const Navbar = () => {
         </Flex>
       </Box>
 
-      {/* User role and balance */}
+      {/* Desktop header */}
       <Box
         display={{ base: "none", md: "block" }}
+        w="100%"
+        bg="purple.500"
+        p={4}
         position="fixed"
-        top={4}
-        right={4}
-        color="white"
+        top={0}
+        left="250px"
+        right={0}
+        zIndex={1001}
+        borderBottom="1px solid white"
       >
-        <Text>User Role: Admin</Text>
-        <Text>Balance: $1000</Text>
-      </Box>
-
-      {/* Notifications and settings icons */}
-      <Box
-        display={{ base: "none", md: "block" }}
-        position="fixed"
-        top={4}
-        right={16}
-        color="white"
-      >
-        <Menu>
-          <MenuButton as={Button} variant="outline" color="white">
-            <MdNotifications />
-          </MenuButton>
-          <MenuList>
-            {notifications.map((notification, index) => (
-              <MenuItem key={index}>{notification}</MenuItem>
-            ))}
-          </MenuList>
-        </Menu>
-        <IconButton
-          aria-label="Settings"
-          icon={<MdSettings />}
-          variant="outline"
-          color="white"
-          ml={4}
-        />
+        <Flex justify="space-between" align="center">
+          <Box textAlign="center">
+            <Text fontSize="lg" color="white">Cashier Account</Text>
+            <Text fontSize="sm" color="white">Page Title</Text>
+          </Box>
+          <Flex align="center">
+            <Box color="white" mr={4}>
+              <Text>User Role: Admin</Text>
+              <Text>Balance: $1000</Text>
+            </Box>
+            <Menu>
+              <MenuButton as={Button} variant="outline" color="white">
+                <MdNotifications />
+              </MenuButton>
+              <MenuList>
+                {notifications.map((notification, index) => (
+                  <MenuItem key={index}>{notification}</MenuItem>
+                ))}
+              </MenuList>
+            </Menu>
+            <IconButton
+              aria-label="Settings"
+              icon={<MdSettings />}
+              variant="outline"
+              color="white"
+              ml={4}
+            />
+          </Flex>
+        </Flex>
       </Box>
 
       {/* Mobile menu drawer */}
