@@ -68,6 +68,7 @@ const Navbar = () => {
         left={0}
         top={0}
         zIndex={1001}
+        borderBottom="1px solid white"
       >
         <Image src={logoSrc} alt="Platapay Logo" width="100%" height="auto" mb={8} />
         <NavLinks />
@@ -84,6 +85,7 @@ const Navbar = () => {
         left={0}
         right={0}
         zIndex={1001}
+        borderBottom="1px solid white"
       >
         <Flex justify="space-between" align="center">
           <Flex align="center">
