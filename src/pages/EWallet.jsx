@@ -1,10 +1,12 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, Text, Container } from "@chakra-ui/react";
 
 const EWallet = () => (
-  <Box p={4}>
-    <Heading>E-Wallet</Heading>
-    <Text mt={4}>Manage your funds conveniently with Platapay's e-wallet.</Text>
-  </Box>
+  <Container maxW="container.xl" py={8}>
+    <Box>
+      <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>E-Wallet</Heading>
+      <Text mt={4} fontSize={{ base: "md", md: "lg" }}>Manage your funds conveniently with Platapay's e-wallet.</Text>
+    </Box>
+  </Container>
 );
 
 export default EWallet;

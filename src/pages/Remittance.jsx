@@ -1,10 +1,12 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, Text, Container } from "@chakra-ui/react";
 
 const Remittance = () => (
-  <Box p={4}>
-    <Heading>Remittance</Heading>
-    <Text mt={4}>Send and receive money with ease using Platapay's remittance service.</Text>
-  </Box>
+  <Container maxW="container.xl" py={8}>
+    <Box>
+      <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}>Remittance</Heading>
+      <Text mt={4} fontSize={{ base: "md", md: "lg" }}>Send and receive money with ease using Platapay's remittance service.</Text>
+    </Box>
+  </Container>
 );
 
 export default Remittance;
