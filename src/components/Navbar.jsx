@@ -97,11 +97,9 @@ const Navbar = () => {
             <Image 
               src={logoSrc} 
               alt="Platapay Logo" 
-              width={{ base: "50px", md: "100%" }} 
+              width={{ base: "100px", md: "100%" }} 
               height={{ base: "auto", md: "auto" }} 
             />
-            <Text fontSize="2xl" color="white">Platapay</Text>
-            <Text fontSize="md" color="white">{document.title}</Text>
           </Flex>
           <Flex>
             <IconButton
