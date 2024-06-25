@@ -1,8 +1,9 @@
 import { Container, Text, VStack, Heading, Box, Image, SimpleGrid, Icon, useColorModeValue, Button } from "@chakra-ui/react";
 import { FaShoppingCart, FaUtensils, FaPiggyBank, FaWallet, FaMobileAlt, FaShieldAlt, FaMoneyBillWave } from "react-icons/fa";
+import logoSrc from "../path/to/logo.png"; // Update the path to the logo image
 
 const Index = () => {
-  const bgColor = useColorModeValue("skyblue", "gray.800");
+  const bgColor = useColorModeValue("purple.500", "gray.800");
 
   return (
     <Box 
@@ -22,7 +23,7 @@ const Index = () => {
         w="100%"
       >
         <Container centerContent>
-          <Image src="/images/logo.png" alt="Platapay Logo" boxSize="100px" mb={4} />
+          <Image src={logoSrc} alt="Platapay Logo" boxSize="100px" mb={4} />
           <VStack spacing={4} textAlign="center">
             <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>Platapay</Heading>
             <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }}>Your Trusted Payment Partner</Text>
@@ -31,7 +32,7 @@ const Index = () => {
           </VStack>
           <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md">
             <Heading fontSize={{ base: "xl", md: "2xl" }}>Why Choose Platapay?</Heading>
-            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4} mt={4}>
+            <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} spacing={4} mt={4}>
               <Box p={4} bg="blue.100" borderRadius="md" boxShadow="md" textAlign="center">
                 <Icon as={FaMobileAlt} w={8} h={8} mb={2} />
                 <Text fontSize="lg">Mobile Friendly</Text>
@@ -51,7 +52,7 @@ const Index = () => {
           </Box>
           <Box mt={8} p={4} bg="whiteAlpha.800" borderRadius="md" boxShadow="md">
             <Heading fontSize={{ base: "xl", md: "2xl" }} mb={4}>Our Services</Heading>
-            <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={4}>
+            <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} spacing={4}>
               <Box p={4} bg="blue.100" borderRadius="md" boxShadow="md" textAlign="center">
                 <Icon as={FaWallet} w={8} h={8} mb={2} />
                 <Text fontSize="lg">E-Wallet</Text>
