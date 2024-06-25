@@ -34,11 +34,11 @@ const BottomNavBar = () => (
     py={2} 
     zIndex={1000}
   >
-    <IconButton icon={<FaHome />} aria-label="Overview" color="white" />
-    <IconButton icon={<FaExchangeAlt />} aria-label="Transfer" color="white" />
-    <IconButton icon={<FaMoneyBill />} aria-label="Pay" color="white" />
-    <IconButton icon={<FaBell />} aria-label="Due" color="white" />
-    <IconButton icon={<FaEllipsisH />} aria-label="More" color="white" />
+    <IconButton icon={<FaHome size="24px" />} aria-label="Overview" color="white" />
+    <IconButton icon={<FaExchangeAlt size="24px" />} aria-label="Transfer" color="white" />
+    <IconButton icon={<FaMoneyBill size="24px" />} aria-label="Pay" color="white" />
+    <IconButton icon={<FaBell size="24px" />} aria-label="Due" color="white" />
+    <IconButton icon={<FaEllipsisH size="24px" />} aria-label="More" color="white" />
   </Box>
 );
 
