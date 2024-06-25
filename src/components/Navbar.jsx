@@ -55,7 +55,7 @@ const Navbar = () => {
         top={0}
         zIndex={1001}
       >
-        <Image src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub.png?w=1024" alt="Platapay Logo" boxSize="50px" mb={8} />
+        <Image src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub.png?w=1024" alt="Platapay Logo" width="100%" height="auto" mb={8} />
         <NavLinks />
       </Box>
 
@@ -72,7 +72,7 @@ const Navbar = () => {
         zIndex={1001}
       >
         <Flex justify="space-between" align="center">
-          <Image src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub.png?w=1024" alt="Platapay Logo" boxSize="50px" />
+          <Image src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub.png?w=1024" alt="Platapay Logo" width="100%" height="auto" />
           <IconButton
             aria-label="Open menu"
             icon={<GiHamburgerMenu />}
