@@ -72,7 +72,12 @@ const Navbar = () => {
         zIndex={1001}
       >
         <Flex justify="space-between" align="center">
-          <Image src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub.png?w=1024" alt="Platapay Logo" width="100%" height="auto" />
+          <Image 
+            src="https://marcroland84.wordpress.com/wp-content/uploads/2024/06/copy-of-innovate-hub.png?w=1024" 
+            alt="Platapay Logo" 
+            width={{ base: "50px", md: "100%" }} 
+            height={{ base: "auto", md: "auto" }} 
+          />
           <IconButton
             aria-label="Open menu"
             icon={<GiHamburgerMenu />}
